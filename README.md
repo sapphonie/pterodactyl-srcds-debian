@@ -1,2 +1,3 @@
-# Containers
-Generic docker containers designed to run source engine games.
+# Docker Container
+Generic docker container designed to be able to run source engine games.
+
