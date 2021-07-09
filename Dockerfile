@@ -16,7 +16,7 @@ RUN         dpkg --add-architecture i386 \
             && update-locale lang=en_US.UTF-8 \
             && dpkg-reconfigure --frontend noninteractive locales \
             && useradd -m -d /home/container container
-            && rm /etc/resolv.conf; echo "nameserver 8.8.8.8\nnameserver 8.8.4.4" > /etc/resolv.conf
+            #&& rm /etc/resolv.conf; echo "nameserver 8.8.8.8\nnameserver 8.8.4.4" > /etc/resolv.conf
 
 
 USER        container
