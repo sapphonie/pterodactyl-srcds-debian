@@ -2,7 +2,7 @@
 # Pterodactyl Panel Dockerfile
 # Environment: Source Engine
 # ----------------------------------
-FROM        debian:buster
+FROM        debian:buster-slim
 
 LABEL       author="Pterodactyl Software - edited by sapphonie" maintainer="sappho@sappho.io"
 
@@ -23,7 +23,7 @@ RUN         dpkg --add-architecture i386 \
             # bump
 
 
-USER        container:container
+USER        root:root
 ENV         HOME /home/container
 WORKDIR     /home/container
 

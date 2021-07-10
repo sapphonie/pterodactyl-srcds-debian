@@ -16,8 +16,8 @@ runserver()
     MODIFIED_STARTUP=$(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')
     echo -e ":/home/container$ ${MODIFIED_STARTUP}"
 
-    # Run the Server
-    eval ${MODIFIED_STARTUP}
+    # evil evil evil
+    sudo -E -u container eval ${MODIFIED_STARTUP}
 }
 
 # run bash if we're running in a setup script, or if no startup command is provided.
