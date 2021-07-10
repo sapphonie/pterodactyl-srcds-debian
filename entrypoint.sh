@@ -5,10 +5,6 @@ sleep 1
 INTERNAL_IP=$(ip route get 1 | awk '{print $NF;exit}')
 export INTERNAL_IP
 
-
-# run bash if we're running in a setup script, otherwise, run normal server logic
-[[ $1 =~ bash ]] && runbash || runserver
-
 runbash()
 {
     bash
@@ -23,3 +19,12 @@ runserver()
     # Run the Server
     eval ${MODIFIED_STARTUP}
 }
+
+# run bash if we're running in a setup script, or if no startup command is provided.
+# otherwise, run normal server logic
+if [[ ${STARTUP} =~ bash ]] || [[ ! ${STARTUP} ]]; then
+    runbash
+else
+    runserver
+fi
+
