@@ -22,7 +22,7 @@ runserver()
 
 # run bash if we're running in a setup script, or if no startup command is provided.
 # otherwise, run normal server logic
-if [[ ${STARTUP} =~ bash ]] || [[ ! ${STARTUP} ]]; then
+if [[ ${STARTUP} == bash ]] || [[ ! ${STARTUP} ]]; then
     runbash
 else
     runserver
