@@ -4,7 +4,7 @@
 # ----------------------------------
 FROM        debian:buster-slim
 
-LABEL       author="Pterodactyl Software - edited by sapphonie" maintainer="sappho@sappho.io"
+LABEL       author="Pterodactyl Software - edited by sapphonie, freylint" maintainer="sappho@sappho.io"
 
 ENV         DEBIAN_FRONTEND noninteractive
 
