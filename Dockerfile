@@ -17,7 +17,7 @@ RUN         dpkg --add-architecture i386 \
             lib32gcc1-amd64-cross libgcc1 libcurl4-gnutls-dev:i386 libcurl4:i386 libtinfo5 lib32z1 libstdc++6 lib32stdc++6 libncurses5:i386 libcurl3-gnutls:i386 libreadline5 lib32ncurses-dev libsdl1.2-dev libfontconfig1 libtcmalloc-minimal4 libmariadb3 \
             && update-locale lang=en_US.UTF-8 \
             && dpkg-reconfigure --frontend noninteractive locales \
-            && useradd -U -m -d /home/container container \
+            && useradd container -s /bin/bash \
             # dns fuckery, commented for now
             #&& rm /etc/resolv.conf; echo "nameserver 8.8.8.8\nnameserver 8.8.4.4" > /etc/resolv.conf
             # bump
