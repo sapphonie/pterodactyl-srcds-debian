@@ -25,7 +25,7 @@ RUN         dpkg --add-architecture i386 \
             # bump
 
 
-USER        root:root
+USER        container:container
 ENV         HOME /home/container
 WORKDIR     /home/container
 
