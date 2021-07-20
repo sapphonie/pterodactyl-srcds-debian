@@ -5,6 +5,6 @@ Note: this container can run bash if no args are passed or if `bash` is passed i
 
 Usage:
 
-`docker run -it quay.io/sapphonie/pterodactyl-srcds-debian-buster`
+`docker run -it creatorstf/pterodactyl-srcds-debian-buster`
 
 Will use github's docker repository in the near future.
