@@ -27,4 +27,3 @@ if [[ ${STARTUP} == bash ]] || [[ ! ${STARTUP} ]]; then
 else
     runserver
 fi
-
