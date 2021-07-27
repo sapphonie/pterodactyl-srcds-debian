@@ -31,6 +31,8 @@ RUN         tput setaf 2; echo "Installing dependencies..."; tput sgr0; \
             && apt-get install -y --no-install-recommends \ 
             # needed for ip route stuff in entrypoint.sh
             net-tools iproute2 \
+            # python
+            python3-minimal \
             # TF2 Wiki says these are required
             lib32z1 libncurses5:i386 libbz2-1.0:i386 lib32gcc1 lib32stdc++6 libtinfo5:i386 libcurl3-gnutls:i386 \
             # needed for some sourcemod extensions
