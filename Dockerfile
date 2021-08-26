@@ -38,7 +38,9 @@ RUN         tput setaf 2; echo "Installing dependencies..."; tput sgr0; \
             # needed for some sourcemod extensions
             curl libcurl4:i386 \
             # needed for steamcmd
-            ca-certificates
+            ca-certificates \
+            # valgrind / libcdebug
+            valgrind libc6-dbg:i386
 
 # set up our container user
 RUN         tput setaf 2; echo "Creating container user..."; tput sgr0; \
