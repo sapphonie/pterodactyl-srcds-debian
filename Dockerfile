@@ -40,7 +40,9 @@ RUN         tput setaf 2; echo "Installing dependencies..."; tput sgr0; \
             # needed for steamcmd
             ca-certificates \
             # valgrind / libcdebug
-            valgrind libc6-dbg:i386
+            valgrind libc6-dbg:i386 \
+            # gdb
+            gdb
 
 # set up our container user
 RUN         tput setaf 2; echo "Creating container user..."; tput sgr0; \
