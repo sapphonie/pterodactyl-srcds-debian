@@ -36,7 +36,7 @@ RUN         tput setaf 2; echo "Installing dependencies..."; tput sgr0; \
             # needed for some sourcemod extensions
             curl libcurl4:i386 \
             # helpful tools
-            python3 valgrind gdb linux-perf:i386 \
+            python3 valgrind gdb \
             # needed for steamcmd
             ca-certificates
 
