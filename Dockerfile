@@ -2,7 +2,7 @@
 # Pterodactyl Panel Dockerfile
 # Environment: Source Engine
 # ----------------------------------
-FROM        debian:bullseye-slim
+FROM        debian:bookworm-slim
 
 LABEL       author="Pterodactyl Software - edited by sapphonie" maintainer="sappho@sappho.io"
 
@@ -36,7 +36,7 @@ RUN         tput setaf 2; echo "Installing dependencies..."; tput sgr0; \
             # needed for some sourcemod extensions
             curl libcurl4:i386 \
             # helpful tools
-            python valgrind gdb \
+            python3 valgrind gdb linux-perf:i386 \
             # needed for steamcmd
             ca-certificates
 
