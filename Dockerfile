@@ -33,8 +33,10 @@ RUN         tput setaf 2; echo "Installing dependencies..."; tput sgr0; \
             net-tools iproute2 \
             # TF2 Wiki says these are required
             lib32z1 libncurses5:i386 libbz2-1.0:i386 lib32gcc-s1 lib32stdc++6 libtinfo5:i386 libcurl3-gnutls:i386 \
+            # For TF2C dependencies
+            unzip aria2 libsdl2-2.0-0:i386 libcurl4-gnutls-dev libcurl4-gnutls-dev:i386 \
             # needed for some sourcemod extensions
-            curl libcurl4:i386 \
+            curl wget libcurl4:i386 \
             # helpful tools
             python valgrind gdb \
             # needed for steamcmd
