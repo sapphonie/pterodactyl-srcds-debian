@@ -4,7 +4,3 @@
 This is modification of sapphonie's srcds Dockerfiles which includes all files necessary for TF2C.
 
 Note: this container can run bash if no args are passed or if `bash` is passed in the startup options.
-
-Usage:
-
-`docker run -it RoonMoonlight/srcds-tf2c-debian:bullseye`
