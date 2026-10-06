@@ -2,7 +2,7 @@
 cd /home/container || exit 1
 sleep 1
 # Make internal Docker IP address available to processes.
-INTERNAL_IP=$(ip route get 1 | awk '{print $NF;exit}')
+INTERNAL_IP=$(ip route get 1 | awk '{for (i = 1; i < NF; i++) if ($i == "src") {print $(i+1); exit}}')
 export INTERNAL_IP
 
 runbash()
